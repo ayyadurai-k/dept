@@ -1,0 +1,49 @@
+[
+    
+    {
+        "name" : "Ayyadurai K",
+        "email": "2021itc005@maduracollege.edu.in",
+        "phone":6383570296,
+        "gender":"Male",
+        "regno" : "2021ITC005",
+        "password": "01-06-2004",
+        "DOB": "01-06-2004",
+        "dept":"IT",
+        "year":3        
+    },
+    
+    {
+        "name" : "Gowtham S",
+        "email": "2021itc008@maduracollege.edu.in",
+        "phone":8610804569,
+        "regno" : "2021ITC008",
+        "password": "03-02-2004",
+        "DOB": "03-02-2004",
+        "gender":"Male",
+        "dept":"IT",
+        "year":3    
+    },
+    {
+        "name" : "Madhanraj JR",
+        "email": "2021itc0016@maduracollege.edu.in",
+        "phone":8825893275,
+        "regno" : "2021ITC016",
+        "password": "10-05-2004",
+        "DOB": "10-05-2004",
+        "gender":"Male",
+        "dept":"IT",
+        "year":3    
+    },
+    
+    {
+        "name" : "Gayathri KM",
+        "email": "2021itc007@maduracollege.edu.in",
+        "phone":8098911879,
+        "regno" : "2021ITC007",
+        "password": "02-11-2003",
+        "DOB": "02-11-2003",
+        "gender":"Female",
+        "dept":"IT",
+        "year":3    
+    }
+]

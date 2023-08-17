@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    user-select: none;
+}
+@layer components{
+    .link{
+        @apply text-amber-400 font-bold font-poppins m-5 hover:bg-amber-400  hover:text-black px-3 py-2 rounded-lg;
+    }
+    .mobilemenu{
+        @apply  mt-3 mx-auto w-3/4 font-semibold hover:bg-black hover:text-yellow-500 text-center rounded-lg ;
+    }
+    .dayorder{
+        @apply w-12 h-12 rounded-xl text-center p-3 shadow-2xl font-bold;
+    }
+}
