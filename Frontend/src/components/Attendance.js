@@ -77,9 +77,9 @@ const Attendance = () => {
         <>
             {loading && <Loader/>}
             {successLoading && <Loader/>}
-            {!error && !loading && !success&&<main className=" p-5 lg:p-8 lg:px-20 w-10/12 mx-auto mb-10">
+            {!error && !loading && !success&&<main className=" lg:p-8 lg:px-20 w-10/12 mx-auto mb-10">
                 <section className="">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between flex-col md:flex-row">
                         <h1 className="font-bold text-xl md:text-2xl uppercase md:tracking-wide">
                             Attendance
                         </h1>
@@ -87,7 +87,7 @@ const Attendance = () => {
                             {getDate()}
                         </label>
                     </div>
-                    <div className=" mt-2 rounded-xl bg-gradient-to-r p-3 from-emerald-400 to-cyan-400 ">
+                    <div className=" mt-2 rounded-xl bg-gradient-to-r  from-emerald-400 to-cyan-400 ">
                         <Link to={'/staff'} className="rounded-lg bg-white font-bold text-sm px-3 py-1">
                             <label className="cursor-pointer">Back</label>
                         </Link>
@@ -151,9 +151,9 @@ const Attendance = () => {
             </>}
             {  !error && success && !loading&& !successLoading && <main className='flex justify-center items-center w-full   '>
                     <section className='my-auto w-full '>
-                        <div className=' w-1/3 p-5 rounded-lg mx-auto mt-20'>
-                            <h1 className='font-bold text-2xl text-center'>Success</h1>
-                            <p className='bg-green-500 rounded-lg p-5 font-bold text-lg text-center my-3'>Attendance Posted Succesfully...!</p>
+                        <div className='w-3/4 p-2 rounded-lg mx-auto mt-20'>
+                            <h1 className='font-bold text-xl md:text-2xl text-center'>Success</h1>
+                            <p className='bg-green-500 w-full rounded-lg  font-bold text-lg text-center my-3'>Attendance Posted Succesfully...!</p>
                             <p className='font-bold text-md text-center text-gray-800'>
                                 <Link to={'/staff'}>Please Go Back</Link>
                             </p>

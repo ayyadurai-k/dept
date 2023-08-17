@@ -29,9 +29,9 @@ const StaffDetails = () => {
     return (
         <>
             {loading && <Loader />}
-            {!error && !loading && <main className="bg-gray-300  w-full p-2 h-screen mb-10">
-                <section className="bg-white w-11/12  border border-black mx-auto rounded-xl p-5 mt-5 ">
-                    <h1 className="font-bold text-black text-2xl center">Class Name</h1>
+            {!error && !loading && <main className="bg-gray-300  w-full p-2 h-full mb-10">
+                <section className="bg-white w-11/12  border border-black mx-auto rounded-xl p-5 mt-5 mb-10">
+                    <h1 className="font-bold text-black text-2xl center">Staffs</h1>
                     <div className='hidden lg:block'>
                         <table className="w-full mt-5 ">
                             <thead className="bg-blue-500 border-b-2 rounded border-gray-600 text-xl">

@@ -38,7 +38,7 @@ const StaffContent = () => {
             <div className="">
               <div className=" p-5 rounded-xl shadow-2xl bg-gradient-to-r from-rose-400 to-red-500">
                 <h1 className="font-bold  text-xl lg:text-2xl">Attendance</h1>
-                <div className="mt-3 flex flex-col">
+                <div className="mt-3 flex flex-col flex-wrap">
                   <label className="ml-1">
                     <span className="font-bold text-gray-800">Department</span>
                     <select
@@ -52,7 +52,7 @@ const StaffContent = () => {
                       <option value="it">IT</option>
                     </select>
                   </label>
-                  <label className="ml-16">
+                  <label className="ml-2 md:ml-16">
                     <span className="font-bold text-gray-800 mt-2">Year</span>
                     <select
                       name="year"
@@ -91,7 +91,7 @@ const StaffContent = () => {
                     type="text"
                     name="search"
                     placeholder="eg : 2021ITC005"
-                    className="outline-none px-2 py-0.5 rounded "
+                    className="outline-none w-3/4 lg:w-full  py-0.5 rounded "
                     onChange={searchHook.handleChange}
                     value={searchHook.input}
                   ></input>

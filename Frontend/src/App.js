@@ -14,13 +14,15 @@ import Error from "./components/Error";
 import Success from "./components/Success";
 import AttendanceDetails from "./components/AttendanceDetails";
 import StaffDetails from "./components/StaffDetails";
+import { useSelector } from "react-redux";
 
 function App() {
+  const {select} = useSelector((state)=>state.navbar)
+
   return (
     <>
       <Header />
-      
-
+  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -36,7 +38,7 @@ function App() {
         <Route path="/success" element={<Success/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
-      <Footer />
+      {select===1 ? <Footer /> : select===4 ? <Footer/> : select===5 && <Footer/>}
     </>
   );
 }
