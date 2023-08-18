@@ -51,11 +51,11 @@ const Header = () => {
             </div>
             {open && <div className="md:hidden ">
                 <ul className="flex flex-col bg-yellow-500 p-1" onClick={()=>setOpen(false)} >
-                    <li className="mobilemenu "><Link to={'/'} className="p-1">Home</Link></li>
-                    <li className="mobilemenu "><Link to={'/staff'} className="p-1">Staff</Link></li>
-                    <li className="mobilemenu "><Link to={'/student'} className="p-1">Student</Link></li>
-                    <li className="mobilemenu "><Link to={'/contact'} className="p-1">Contact</Link></li>
-                    <li className="mobilemenu "><Link to={'/about'} className="p-1">About</Link></li>
+                    <li className="mobilemenu w-3/4"><Link to={'/'} className={`${select===1 && 'bg-black text-white'} rounded-md px-16  py-0.5`}>Home</Link></li>
+                    <li className="mobilemenu w-3/4"><Link to={'/staff'} className={`${select===2 && 'bg-black text-white'} rounded-md px-16  py-0.5`}>Staff</Link></li>
+                    <li className="mobilemenu w-3/4"><Link to={'/student'} className={`${select===3 && 'bg-black text-white'} rounded-md px-16  py-0.5`}>Student</Link></li>
+                    <li className="mobilemenu w-3/4"><Link to={'/contact'} className={`${select===4 && 'bg-black text-white'} rounded-md px-16  py-0.5`}>Contact</Link></li>
+                    <li className="mobilemenu w-3/4"><Link to={'/about'} className={`${select===5 && 'bg-black text-white'} rounded-md px-16  py-0.5`}>About</Link></li>
                 </ul>
             </div>}
         </nav>
