@@ -7,7 +7,8 @@ const  route  = require('./routes/route');
 const error = require('./middlewares/error');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
-const {automaticStaffAttendance} = require('./helpers/attendanceHelpers')
+const {automaticStaffAttendance} = require('./helpers/attendanceHelpers');
+const { getDate } = require('./helpers/dateTimeHelper');
 //config file
 dotenv.config({path:path.join(__dirname,"config","config.env")});
 
@@ -40,6 +41,10 @@ if(process.env.APP_ENV==="production"){
 
 //for handling
 app.use(error)
+
+
+console.log("Time",new Date().getHours());
+console.log("Date",new Date().getDate());
 
 //listen port
  app.listen(PORT,()=>{

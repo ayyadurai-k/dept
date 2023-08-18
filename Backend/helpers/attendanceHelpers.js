@@ -44,15 +44,17 @@ const giveStaffAttendance = async (email, attendanceBool) => {
 
 //codes for schduled jobs
 const giveAutomaticAttendance = async () => {
-  console.log("called");
+
+  if(new Date().getDay()===0 || new Date().getDay()===6){
+      return;
+  }
+
   // get current Date
   const currentDate = getDate();
 
-  console.log(currentDate);
   //get attendance uploaded data
-  const currentDateAttendance = await staffAttendance.find({ date: getDate() })
+  const currentDateAttendance = await staffAttendance.find({ date: getDate() }).select('email')
   
-
   //get all staff data
   const staffsData = await staffs.find().select('email');
 
@@ -73,11 +75,9 @@ const giveAutomaticAttendance = async () => {
       await giveStaffAttendance(staffEmail, false);
     }
   }
-
   // check who is not getin and post them as a false, that means "absent"
   else {
     for await (let staffEmail of staffEmails) {
-      console.log(staffEmail ,":",currentAttendanceEmails.includes(staffEmail));
       if (!(currentAttendanceEmails.includes(staffEmail))) {
         await giveStaffAttendance(staffEmail, false);
       }
@@ -85,11 +85,8 @@ const giveAutomaticAttendance = async () => {
   }
 };
 
-giveAutomaticAttendance()
-
 // codes for schdule
 const automaticStaffAttendance = () => {
-  console.log("scheduled");
   //schedule job for every day at 10am
   schedule.scheduleJob("0 10 * * *", giveAutomaticAttendance);
 };
