@@ -49,10 +49,6 @@ const staffAttendanceSchema = new mongoose.Schema({
         type:Boolean,
         required:[true,"Please enter present"]
      },
-     updatedAt : {
-        type : String,
-        required:[true,"Please enter Last Updated Date!"]
-     },
      month : {
         type:Number,
         required:[true,"Please enter Month"]
