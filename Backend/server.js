@@ -7,6 +7,7 @@ const  route  = require('./routes/route');
 const error = require('./middlewares/error');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
+const {automaticStaffAttendance} = require('./helpers/attendanceHelpers')
 //config file
 dotenv.config({path:path.join(__dirname,"config","config.env")});
 
@@ -27,6 +28,8 @@ app.use(cookieParser())
 app.use(express.json());// get and put json files
 
 app.use(route);
+
+automaticStaffAttendance()
 
 if(process.env.APP_ENV==="production"){
     app.use(express.static(path.join(__dirname,'..','Frontend','build')));

@@ -37,24 +37,24 @@ const giveStaffAttendance = async (email, attendanceBool) => {
     email: email,
     date: getDate(),
     present: attendanceBool,
-    updatedAt: getDate(),
     month: getMonth(),
-    year: getYear(),
+    year: getYear()
   });
 };
 
 //codes for schduled jobs
 const giveAutomaticAttendance = async () => {
+  console.log("called");
   // get current Date
   const currentDate = getDate();
 
+  console.log(currentDate);
   //get attendance uploaded data
-  const currentDateAttendance = await staffAttendance
-    .find({ updatedAt: currentDate })
-    .lean();
+  const currentDateAttendance = await staffAttendance.find({ date: getDate() })
+  
 
   //get all staff data
-  const staffsData = await staffs.find().lean();
+  const staffsData = await staffs.find().select('email');
 
   //take emails form attendance uploaded data
   const currentAttendanceEmails = currentDateAttendance.map((value) => {
@@ -68,26 +68,30 @@ const giveAutomaticAttendance = async () => {
 
   // check all staff attendance uploaded or not ,if all staff not getin click , automatically uploaded
   // false , that means "absent"
-  if (currentDateAttendance.length == 0) {
+  if (currentAttendanceEmails.length == 0) {
     for await (let staffEmail of staffEmails) {
       await giveStaffAttendance(staffEmail, false);
     }
   }
 
-  // check who is not getin post them as a false, that means "absent"
+  // check who is not getin and post them as a false, that means "absent"
   else {
     for await (let staffEmail of staffEmails) {
-      if (!currentAttendanceEmails.includes(staffEmail)) {
+      console.log(staffEmail ,":",currentAttendanceEmails.includes(staffEmail));
+      if (!(currentAttendanceEmails.includes(staffEmail))) {
         await giveStaffAttendance(staffEmail, false);
       }
     }
   }
 };
 
+giveAutomaticAttendance()
+
 // codes for schdule
 const automaticStaffAttendance = () => {
+  console.log("scheduled");
   //schedule job for every day at 10am
-  schedule.scheduleJob("* 10 * * *", giveAutomaticAttendance);
+  schedule.scheduleJob("0 10 * * *", giveAutomaticAttendance);
 };
 
 //convert boolean into counting
@@ -137,8 +141,6 @@ const convertAttendance = (reports) => {
   return results;
 };
 
-// start schedule
-automaticStaffAttendance();
 
 
 const checkUpdateOrNot = async (dept, year) => {
@@ -151,5 +153,6 @@ module.exports = {
   giveStudentAttendance,
   giveStaffAttendance,
   convertAttendance,
-  checkUpdateOrNot
+  checkUpdateOrNot,
+  automaticStaffAttendance
 };

@@ -75,7 +75,7 @@ exports.getStaffDashboard = catchAsyncError(async (req, res, next) => {
   // check if attendance is already uploaded or not
   const updatedOrNot = await staffAttendance.findOne({
     email: staffEmail,
-    updatedAt: currentDate,
+    date: currentDate,
   });
 
 
@@ -190,7 +190,7 @@ exports.selfAttendance = catchAsyncError(async (req, res, next) => {
   // check if attendance is already uploaded or not
   const updatedOrNot = await staffAttendance.findOne({
     email,
-    updatedAt: getDate()
+    date: getDate()
   });
 
   if (updatedOrNot) {
