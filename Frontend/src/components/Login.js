@@ -34,10 +34,10 @@ const Login = () => {
     return (
         <>
             <main className='m-5 p-5 flex mt-3 rounded-2xl bg-[#0cba94] font-[Poppins]'>
-                <div className='lg:w-1/2 hidden lg:block '>
+                <div className='md:w-1/2 hidden md:block '>
                     <img src={userlogin} alt='User Login' className='w-3/4 mx-auto'></img>
                 </div>
-                <div className='w-full lg:w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <form className=' h-full'>
                         <h1 className='text-center font-semibold text-3xl mt-2'>Login</h1>
                         <div className='flex mt-5 justify-center bg-white w-4/5 lg:w-1/2 mx-auto rounded-lg shadow-lg  '>

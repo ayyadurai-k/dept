@@ -17,7 +17,7 @@ const Report = () => {
     return (
         <div className=' '>
             <div className='p-5 rounded-xl shadow-xl  bg-gradient-to-r from-pink-500 to-rose-500'>
-                <h1 className='font-bold  text-xl lg:text-2xl'>Self-Attendace Report</h1>
+                <h1 className='font-bold  text-xl lg:text-2xl'>Self-Attendance Report</h1>
                 <div className='mt-3 grid grid-cols-1 lg:grid-cols-2'>
                     <label className='ml-1'>
                         <span className='font-bold text-gray-800'>Month</span>

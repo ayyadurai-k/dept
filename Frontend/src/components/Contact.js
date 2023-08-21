@@ -44,7 +44,9 @@ const Contact = () => {
                       />
                     </svg>
                     <span className="ml-2 font-bold">
-                      <p>7366001243</p>
+                      <Link to="tel:7366001243">
+                         7366001243
+                      </Link>
                     </span>
                   </label>
                   <label className="flex mt-2">
@@ -64,7 +66,7 @@ const Contact = () => {
                     </svg>
 
                     <span className="ml-2 font-bold break-all">
-                      <Link to="mailto:hodofcsit@maduracollege.com">
+                      <Link to="mailto:rajasaravanakumar.itcs@maduracollege.edu.in">
                       rajasaravanakumar.itcs@maduracollege.edu.in
                       </Link>
                     </span>
