@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Loader from './Loader';
-import { getDate } from '../utils/date';
 import { getClass } from "../utils/class";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getStudents } from "../API/studentAPI";
 import { postAttendanceData } from "../API/attendanceAPI";
 import MiniLoader from './MiniLoader'
+import { useSelector } from "react-redux";
+
 const Attendance = () => {
     //get department using params;
     const { dept, year } = useParams();
@@ -16,6 +17,8 @@ const Attendance = () => {
     const [success,setSuccess]=useState(false);
     const [successLoading,setSuccessLoading] = useState(false);
     const navigate = useNavigate();
+    const date = useSelector(state=>state.date)
+
 
 
     useEffect(() => {
@@ -84,7 +87,7 @@ const Attendance = () => {
                             Attendance
                         </h1>
                         <label className="text-black bg-amber-600 px-3 py-1 font-extrabold rounded-lg">
-                            {getDate()}
+                            {date.fulldate}
                         </label>
                     </div>
                     <div className=" mt-2 rounded-xl bg-gradient-to-r  from-emerald-400 to-cyan-400 ">

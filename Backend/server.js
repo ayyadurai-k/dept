@@ -8,7 +8,7 @@ const error = require('./middlewares/error');
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
 const {automaticStaffAttendance} = require('./helpers/attendanceHelpers');
-const { getDate } = require('./helpers/dateTimeHelper');
+const { getDate, getYear } = require('./helpers/dateTimeHelper');
 //config file
 dotenv.config({path:path.join(__dirname,"config","config.env")});
 
@@ -31,8 +31,11 @@ app.use(express.json());// get and put json files
 app.use(route);
 app.get('/date',(req,res)=>{
     res.status(200).json({
-        date : new Date().getDate(),
-        hours: new Date().getHours()
+        fulldate : getDate(),
+        date:new Date().getDate(),
+        month: new Date().toLocaleString('default',{month : 'short'}).toUpperCase(),
+        year : getYear(),
+        day : new Date().getDay()
     })
 })
 
@@ -49,8 +52,6 @@ if(process.env.APP_ENV==="production"){
 app.use(error)
 
 
-console.log("Time",new Date().getHours());
-console.log("Date",new Date().getDate());
 
 //listen port
  app.listen(PORT,()=>{

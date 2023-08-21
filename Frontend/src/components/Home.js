@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Helmet ,HelmetProvider} from 'react-helmet-async';
 //images
@@ -7,35 +7,13 @@ import quoteImg from '../assets/quote.png';
 import dayorder from '../assets/dayorder.png';
 import { getQuote } from '../utils/quoteGenerator';
 import { changeSelect } from '../app/slicers/navSlicer';
-import { useDispatch } from 'react-redux';
-import { getDayOrder } from '../utils/dayOrder';
-import { getDate } from '../API/dateAPI';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Home = () => {
 
-    
-
-    const [today, setToday] = useState({
-        date: '',
-        month: '',
-        year : ''
-    })
-
-   const [quote,setQuote]=useState(getQuote())
+    const date = useSelector(state=>state.date)
+    const [quote,setQuote]=useState(getQuote())
     const dispatch =useDispatch();
-
-    useEffect(() => {
-        //date
-        async function api(){
-            const {data} = await getDate()
-            setToday({
-                date:data.date
-                
-            })
-        }api()
-
-        
-    },[])
 
     //for quote
     useEffect(()=>{
@@ -52,11 +30,11 @@ const Home = () => {
 
     //for animation
      // if day order equal to 1
-    const [dayOrder, setDayOrder] = useState(1);
+    const [dayOrder, setDayOrder] = useState(date.day);
     useEffect(() => {
-        setDayOrder(getDayOrder()); 
+        setDayOrder(date.day); 
         dispatch(changeSelect(1))
-    },[dispatch])
+    },[dispatch,date.day])
 
 
     return (
@@ -105,9 +83,9 @@ const Home = () => {
                             <h1 className='font-bold text-3xl text-center '>Today</h1>
                             <div className=' mt-4  p-10 mx-auto bg-white rounded-2xl '>
                                 <div className=''>
-                                    <h3 className='  w-full mt-1 bg-purple-400 rounded-xl px-1 py-0.5 pl-3 font-bold shadow-xl text-center pr-3'>{ today.date}</h3>
-                                    <h3 className='  w-1/2 mt-1 mx-auto bg-purple-400 rounded-xl  py-0.5 pl-3 font-bold shadow-xl text-center pr-5'>{ today.month}</h3>
-                                    <h3 className='  w-full mt-1 bg-purple-400 rounded-xl pr-5 py-0.5 pl-3 font-bold shadow-xl text-center'>{ today.year}</h3>
+                                    <h3 className='  w-full mt-1 bg-purple-400 rounded-xl px-1 py-0.5 pl-3 font-bold shadow-xl text-center pr-3'>{date.date}</h3>
+                                    <h3 className='  w-1/2 mt-1 mx-auto bg-purple-400 rounded-xl  py-0.5 pl-3 font-bold shadow-xl text-center pr-5'>{date.month}</h3>
+                                    <h3 className='  w-full mt-1 bg-purple-400 rounded-xl pr-5 py-0.5 pl-3 font-bold shadow-xl text-center'>{date.year}</h3>
                                 </div>
          
                             </div>

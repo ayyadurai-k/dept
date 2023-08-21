@@ -11,13 +11,19 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Attendance from "./components/Attendance";
 import Error from "./components/Error";
-import Success from "./components/Success";
 import AttendanceDetails from "./components/AttendanceDetails";
 import StaffDetails from "./components/StaffDetails";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import setDT from './app/actions/setDT'
 
 function App() {
   const {select} = useSelector((state)=>state.navbar)
+  const dispatch =useDispatch();
+
+  useEffect(()=>{
+      setDT(dispatch);
+  },[dispatch])
 
   return (
     <>
@@ -35,7 +41,6 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/attendance/:dept/:year" element={<Attendance/>}/>
         <Route path="/error" element={<Error/>}/>
-        <Route path="/success" element={<Success/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
       {select===1 ? <Footer /> : select===4 ? <Footer/> : select===5 && <Footer/>}
