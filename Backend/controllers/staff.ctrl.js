@@ -1,5 +1,6 @@
 const { hashPassword, comparePassword } = require("../helpers/hashHelper");
 const { generateToken } = require("../helpers/jwtHelpers");
+const {Navigator} = require('node-navigator')
 const { getDate, getYear } = require("../helpers/dateTimeHelper");
 const {
   getStudents,
@@ -19,6 +20,7 @@ const staffAttendance =
 
 const ErrorHandler = require("../utils/ErrorHandler");
 const { catchAsyncError } = require("../middlewares/catchAsyncError");
+const { checkLocation } = require("../helpers/locationHelper");
 
 //posting username and password
 //url : /staff/login(post)
@@ -185,6 +187,14 @@ exports.postAttendanceData = catchAsyncError(async (req, res, next) => {
 exports.selfAttendance = catchAsyncError(async (req, res, next) => {
   //get email
   const email = req.user.email;
+  const {latitude,longtitude}=req.body;
+
+  
+  const inCollege = checkLocation(Number(latitude),Number(longtitude));
+
+  if(!inCollege){
+      return next(new ErrorHandler("You're Not In The College",400))
+  }
 
 
   // check if attendance is already uploaded or not

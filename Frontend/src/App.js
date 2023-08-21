@@ -25,12 +25,6 @@ function App() {
       setDT(dispatch);
   },[dispatch])
 
-  if(navigator.geolocation){
-    console.log("supported");
-  }else{
-    console.log("not supported");
-  }
-
   return (
     <>
       <Header />
