@@ -9,6 +9,7 @@ import { getQuote } from '../utils/quoteGenerator';
 import { changeSelect } from '../app/slicers/navSlicer';
 import { useDispatch } from 'react-redux';
 import { getDayOrder } from '../utils/dayOrder';
+import { getDate } from '../API/dateAPI';
 
 const Home = () => {
 
@@ -25,12 +26,15 @@ const Home = () => {
 
     useEffect(() => {
         //date
-        const date = new Date();
-        setToday({
-            date: date.getDate(),
-            month: date.toLocaleString('default',{month : 'short'}).toUpperCase(),
-            year : date.getFullYear()
-        })
+        async function api(){
+            const {data} = await getDate()
+            setToday({
+                date:data.date
+                
+            })
+        }api()
+
+        
     },[])
 
     //for quote

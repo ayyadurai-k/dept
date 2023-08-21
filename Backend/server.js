@@ -29,6 +29,12 @@ app.use(cookieParser())
 app.use(express.json());// get and put json files
 
 app.use(route);
+app.get('/date',(req,res)=>{
+    res.status(200).json({
+        date : new Date().getDate(),
+        hours: new Date().getHours()
+    })
+})
 
 automaticStaffAttendance()
 
