@@ -12,8 +12,7 @@ import { getDayOrder } from '../utils/dayOrder';
 
 const Home = () => {
 
-    //date
-    const date = new Date();
+    
 
     const [today, setToday] = useState({
         date: '',
@@ -25,20 +24,14 @@ const Home = () => {
     const dispatch =useDispatch();
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setToday({
-                date: date.getDate(),
-                month: date.toLocaleString('default',{month : 'short'}).toUpperCase(),
-                year : date.getFullYear()
-            },1000)
+        //date
+        const date = new Date();
+        setToday({
+            date: date.getDate(),
+            month: date.toLocaleString('default',{month : 'short'}).toUpperCase(),
+            year : date.getFullYear()
         })
-
-        
-
-        return function cleanup() {
-            clearInterval(timer); 
-        }
-    })
+    },[])
 
     //for quote
     useEffect(()=>{

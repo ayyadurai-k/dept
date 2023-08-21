@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getStaffs } from '../API/staffAPI'
 import { useNavigate } from 'react-router-dom'
 import Loader from './Loader'
@@ -25,6 +25,7 @@ const StaffDetails = () => {
 
     }, [])
 
+    
 
     return (
         <>
@@ -39,7 +40,7 @@ const StaffDetails = () => {
                                     <th className="p-3">Email</th>
                                     <th className="p-3">Name</th>
                                     <th className="p-3">Gender</th>
-                                    <th className="p-3">phone</th>
+                                    <th className="p-3">Phone</th>
 
                                 </tr>
                             </thead>

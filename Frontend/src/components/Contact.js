@@ -44,7 +44,7 @@ const Contact = () => {
                       />
                     </svg>
                     <span className="ml-2 font-bold">
-                      <p>(0452) 2673354</p>
+                      <p>7366001243</p>
                     </span>
                   </label>
                   <label className="flex mt-2">
@@ -63,9 +63,9 @@ const Contact = () => {
                       />
                     </svg>
 
-                    <span className="ml-2 font-bold">
+                    <span className="ml-2 font-bold break-all">
                       <Link to="mailto:hodofcsit@maduracollege.com">
-                        hodofcsit@maduracollege.com
+                      rajasaravanakumar.itcs@maduracollege.edu.in
                       </Link>
                     </span>
                   </label>
@@ -91,6 +91,9 @@ const Contact = () => {
                     </svg>
 
                     <span className="flex flex-col">
+                   < span className="ml-2 font-bold block">
+                        Dept Of CS & IT
+                      </span>
                       <span className="ml-2 font-bold block">
                         The Madura College
                       </span>

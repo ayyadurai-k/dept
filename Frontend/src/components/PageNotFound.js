@@ -1,11 +1,21 @@
-import React from 'react'
+import { changeSelect } from "../app/slicers/navSlicer";
+import { useDispatch } from "react-redux";
+
 
 //image
 import PNF from '../assets/PageNotFound.svg';
 import { HelmetProvider } from 'react-helmet-async';
 import { Helmet } from 'react-helmet';
+import { useEffect } from "react";
 
 const PageNotFound = () => {
+
+  const dispatch = useDispatch();
+
+   useEffect(()=>{
+      dispatch(changeSelect(0))
+   },[dispatch])
+
   return (
     <>
       <HelmetProvider>
