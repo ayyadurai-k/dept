@@ -51,7 +51,7 @@ if(process.env.APP_ENV==="production"){
 //for handling
 app.use(error)
 
-
+console.log("date ",getDate());
 
 //listen port
  app.listen(PORT,()=>{

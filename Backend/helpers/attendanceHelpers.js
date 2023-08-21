@@ -33,7 +33,7 @@ const giveStudentAttendance = async (regNo, attendanceBool, dept, year) => {
 };
 
 const giveStaffAttendance = async (email, attendanceBool) => {
-  const createdResult = await staffAttendance.create({
+  await staffAttendance.create({
     email: email,
     date: getDate(),
     present: attendanceBool,
