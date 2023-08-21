@@ -1,17 +1,14 @@
 
-const date= new Date();
-
-
 exports.getDate = ()=>{
-    const finalDate = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}`;
+    const finalDate = `${new Date().getDate()}-${new Date().getMonth()+1}-${new Date().getFullYear()}`;
     return finalDate;
 }
 
 exports.getMonth=()=>{
-    return date.getMonth()+1;
+    return new Date().getMonth()+1;
 }
 
 exports.getYear=()=>{
-    return date.getFullYear();
+    return new Date().getFullYear();
 }
 
