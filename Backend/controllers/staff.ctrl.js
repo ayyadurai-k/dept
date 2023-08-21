@@ -187,10 +187,11 @@ exports.postAttendanceData = catchAsyncError(async (req, res, next) => {
 exports.selfAttendance = catchAsyncError(async (req, res, next) => {
   //get email
   const email = req.user.email;
-  const {latitude,longtitude}=req.body;
+  const {latitude,longitude}=req.body;
 
+  console.log(latitude,longitude);
   
-  const inCollege = checkLocation(Number(latitude),Number(longtitude));
+  const inCollege = checkLocation(Number(latitude),Number(longitude));
 
   if(!inCollege){
       return next(new ErrorHandler("You're Not In The College",400))
