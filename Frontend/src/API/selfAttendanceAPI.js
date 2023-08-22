@@ -25,9 +25,7 @@ export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
             }
             catch (error) {
                 setError(error.response.data.message)
-            } finally {
-                setLoading(false)
-            }
+            } 
         }, (error) => {
             console.log(error);
             setError(error.message)
