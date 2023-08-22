@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import  { useEffect, useState } from 'react'
 import loginValidate from '../utils/loginValidate';
 import loginUser from '../API/loginAPI';
 import {useNavigate } from 'react-router-dom'
@@ -35,6 +35,14 @@ const useLogin = () => {
             }
         })
     }
+
+    //if change selection clear the input fields
+    useEffect(()=>{
+        setInput({
+            username: "",
+            password :""
+        } )
+    },[select])
 
     const handleSubmit = async(e) => {
         e.preventDefault();

@@ -47,8 +47,8 @@ const Home = () => {
                 <div className='grid md:grid-cols-2 '>
                     <div className='p-2 md:p-10 '>
                         <div className=' w-full'>
-                            <h1 className='text-2xl md:text-4xl font-bold text-center md:text-left w-full'>The Madura College</h1>
-                            <p className='font-semibold text-lg md:text-xl text-center md:text-left'>Department Of IT & CS</p>
+                            <h1 className='text-2xl lg:text-4xl font-bold text-center md:text-left w-full'>The Madura College</h1>
+                            <p className='font-semibold text-lg lg:text-xl text-center md:text-left'>Department Of IT & CS</p>
                         </div>
                         <p className='mt-1 text-center md:text-left mx-auto md:mx-0 w-4/5 font-semibold text-gray-900 capitalize'>
                         The Department of Computer Science was established in 1987 and Information Technology was established in 2008-2009 with the vision of producing competent graduates who have a strong foundation to confront the challenges in the computer world with moral values.

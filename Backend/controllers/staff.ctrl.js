@@ -189,12 +189,17 @@ exports.selfAttendance = catchAsyncError(async (req, res, next) => {
   const email = req.user.email;
   const {latitude,longitude}=req.body;
 
+  if(!latitude || !longitude){
+    return next(new ErrorHandler("Cannot Access Your Location..!",400))
+  }
+
+
   console.log(latitude,longitude);
   
   const inCollege = checkLocation(Number(latitude),Number(longitude));
 
   if(!inCollege){
-      return next(new ErrorHandler("You're Not In The College",400))
+      return next(new ErrorHandler("You're Not In The College...!",400))
   }
 
 

@@ -14,9 +14,10 @@ const Profile = () => {
   const [getIn, setGetIn] = useState(user.getIn);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const date = useSelector(state=>state.date)
 
   const handleGetIn = async () => {
-      await selfAttendance(setError,setGetIn,setLoading);
+      await selfAttendance(setError,setGetIn,setLoading,date);
   }
 
   return (

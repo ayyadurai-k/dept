@@ -35,7 +35,8 @@ app.get('/date',(req,res)=>{
         date:new Date().getDate(),
         month: new Date().toLocaleString('default',{month : 'short'}).toUpperCase(),
         year : getYear(),
-        day : new Date().getDay()
+        day : new Date().getDay(),
+        hours:new Date().getHours()
     })
 })
 
