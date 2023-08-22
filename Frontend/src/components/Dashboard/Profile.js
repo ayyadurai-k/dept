@@ -17,6 +17,7 @@ const Profile = () => {
   const date = useSelector(state=>state.date)
 
   const handleGetIn = async () => {
+      setLoading(true);
       await selfAttendance(setError,setGetIn,setLoading,date);
   }
 
