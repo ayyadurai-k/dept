@@ -3,12 +3,12 @@ import axios from 'axios'
 export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
 
     //check day 
-    if(date.day===0 || date.day===6){
+    if(Number(date.day)===0 || Number(date.day)===6){
         return setError("Sunday and Saturday Not Allowed...!")
     }
 
     //check time only 8.45am to 10 am
-    if(date.hours<8 || date.hours>9){
+    if(Number(date.hours)<8 || Number(date.hours)>9){
         return setError("Only 7am to 10am is Open...!")
     }
     
@@ -19,7 +19,6 @@ export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
             // const latitude = 9.911151567126199;
             // const longitude = 78.1089191218433;
             try {
-               
                 await axios.post('/staff/self-attendance', { latitude, longitude })
                 setGetIn(true)
                 setError(null)
