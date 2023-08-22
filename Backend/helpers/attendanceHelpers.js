@@ -45,9 +45,9 @@ const giveStaffAttendance = async (email, attendanceBool) => {
 //codes for schduled jobs
 const giveAutomaticAttendance = async () => {
 
-  // if(new Date().getDay()===0 || new Date().getDay()===6){
-  //     return;
-  // }
+  if(new Date().getDay()===0 || new Date().getDay()===6){
+      return;
+  }
 
   // get current Date
   const currentDate = getDate();

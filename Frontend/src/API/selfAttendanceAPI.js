@@ -9,7 +9,7 @@ export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
 
     //check time only 8.45am to 10 am
     if(Number(date.hours)<8 || Number(date.hours)>9){
-        return setError("Only 7am to 10am is Open...!")
+        return setError("Only 8am to 10am is Open...!")
     }
     
     if (navigator.geolocation) {
