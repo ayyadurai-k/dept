@@ -7,7 +7,7 @@ const loginValidate = (input) => {
     if (!username.trim()) {
         error.email="Email is Required!"
     }
-    else if(!username.includes("@maduracollege.edu.in")) {
+    else if(!username.includes("@tmc.edu.in")) {
         error.custom="Invalid Crendetials !"
     }
 

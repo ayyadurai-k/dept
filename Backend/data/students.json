@@ -1,7 +1,7 @@
 [
     {
         "name": "Aarthy",
-        "email": "2021itc001@maduracollege.edu.in",
+        "email": "2021itc001@tmc.edu.in",
         "phone": 3456789876,
         "gender": "Female",
         "regno": "2021ITC001",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Alaguraja",
-        "email": "2021itc002@maduracollege.edu.in",
+        "email": "2021itc002@tmc.edu.in",
         "phone": 1234567898,
         "gender": "Male",
         "regno": "2021ITC002",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Angalaehwari",
-        "email": "2021itc003@maduracollege.edu.in",
+        "email": "2021itc003@tmc.edu.in",
         "phone": 5678564532,
         "gender": "Female",
         "regno": "2021ITC003",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Ashwin",
-        "email": "2021itc004@maduracollege.edu.in",
+        "email": "2021itc004@tmc.edu.in",
         "phone": 4567875645,
         "gender": "Male",
         "regno": "2021ITC004",
@@ -45,7 +45,7 @@
     },
     {
         "name": "Ayyadurai K",
-        "email": "2021itc005@maduracollege.edu.in",
+        "email": "2021itc005@tmc.edu.in",
         "phone": 6383570296,
         "gender": "Male",
         "regno": "2021ITC005",
@@ -56,7 +56,7 @@
     },
     {
         "name": "Bala",
-        "email": "2021itc006@maduracollege.edu.in",
+        "email": "2021itc006@tmc.edu.in",
         "phone": 6789345678,
         "gender": "Male",
         "regno": "2021ITC006",
@@ -67,7 +67,7 @@
     },
     {
         "name": "Gayathri KM",
-        "email": "2021itc007@maduracollege.edu.in",
+        "email": "2021itc007@tmc.edu.in",
         "phone": 8098911879,
         "regno": "2021ITC007",
         "password": "gayathri@123",
@@ -78,7 +78,7 @@
     },
     {
         "name": "Gowtham S",
-        "email": "2021itc008@maduracollege.edu.in",
+        "email": "2021itc008@tmc.edu.in",
         "phone": 8610804569,
         "regno": "2021ITC008",
         "password": "gowtham@123",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Hari",
-        "email": "2021itc009@maduracollege.edu.in",
+        "email": "2021itc009@tmc.edu.in",
         "phone": 3456342312,
         "regno": "2021ITC009",
         "password": "hari@123",
@@ -100,7 +100,7 @@
     },
     {
         "name": "Harini B",
-        "email": "2021itc010@maduracollege.edu.in",
+        "email": "2021itc010@tmc.edu.in",
         "phone": 4565342321,
         "regno": "2021ITC010",
         "password": "harini@123",
@@ -111,7 +111,7 @@
     },
     {
         "name": "Janankiraman",
-        "email": "2021csc101@maduracollege.edu.in",
+        "email": "2021csc101@tmc.edu.in",
         "phone": 7867564532,
         "regno": "2021CSC101",
         "password": "janaki@123",
@@ -122,7 +122,7 @@
     },
     {
         "name": "Jeyapraksh",
-        "email": "2021csc102@maduracollege.edu.in",
+        "email": "2021csc102@tmc.edu.in",
         "phone": 8978675654,
         "regno": "2021CSC102",
         "password": "jeyaprakash@123",
@@ -133,7 +133,7 @@
     },
     {
         "name": "Kalai",
-        "email": "2021csc103@maduracollege.edu.in",
+        "email": "2021csc103@tmc.edu.in",
         "phone": 7876565432,
         "regno": "2021CSC103",
         "password": "jeyaprakash@123",
@@ -144,7 +144,7 @@
     },
     {
         "name": "Kavipriya",
-        "email": "2021csc104@maduracollege.edu.in",
+        "email": "2021csc104@tmc.edu.in",
         "phone": 6765453212,
         "regno": "2021CSC104",
         "password": "kavipriya@123",
@@ -155,7 +155,7 @@
     },
     {
         "name": "Lakshmi Prabha",
-        "email": "2021csc105@maduracollege.edu.in",
+        "email": "2021csc105@tmc.edu.in",
         "phone": 5667789765,
         "regno": "2021CSC105",
         "password": "lakshmi@123",
@@ -166,7 +166,7 @@
     },
     {
         "name": "Madhanraj JR",
-        "email": "2021csc106@maduracollege.edu.in",
+        "email": "2021csc106@tmc.edu.in",
         "phone": 8825893275,
         "regno": "2021CSC106",
         "password": "madhanraj@123",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Mani J",
-        "email": "2021csc107@maduracollege.edu.in",
+        "email": "2021csc107@tmc.edu.in",
         "phone": 7898675634,
         "regno": "2021CSC107",
         "password": "mani@123",
@@ -188,7 +188,7 @@
     },
     {
         "name": "Mari",
-        "email": "2021csc108@maduracollege.edu.in",
+        "email": "2021csc108@tmc.edu.in",
         "phone": 6756453423,
         "regno": "2021CSC108",
         "password": "mari@123",
@@ -199,7 +199,7 @@
     },
     {
         "name": "Mustafa",
-        "email": "2021csc109@maduracollege.edu.in",
+        "email": "2021csc109@tmc.edu.in",
         "phone": 8765434568,
         "regno": "2021CSC109",
         "password": "mustafa@123",
@@ -210,7 +210,7 @@
     },
     {
         "name": "Mohanraja",
-        "email": "2021csc110@maduracollege.edu.in",
+        "email": "2021csc110@tmc.edu.in",
         "phone": 6787985643,
         "regno": "2021CSC110",
         "password": "mohanraja@123",
@@ -225,7 +225,7 @@
 
     {
         "name": "Mutheeshwaran",
-        "email": "2022itc001@maduracollege.edu.in",
+        "email": "2022itc001@tmc.edu.in",
         "phone": "8684541745",
         "regno": "2022ITC001",
         "password": "mutheeshwaran@123",
@@ -236,7 +236,7 @@
     },
     {
         "name": "Nandhini",
-        "email": "2022itc002@maduracollege.edu.in",
+        "email": "2022itc002@tmc.edu.in",
         "phone": "8616397998",
         "regno": "2022ITC002",
         "password": "nandhini@123",
@@ -247,7 +247,7 @@
     },
     {
         "name": "Nirmal",
-        "email": "2022itc003@maduracollege.edu.in",
+        "email": "2022itc003@tmc.edu.in",
         "phone": "8686861618",
         "regno": "2022ITC003",
         "password": "nirmal@123",
@@ -258,7 +258,7 @@
     },
     {
         "name": "Padmesh",
-        "email": "2022itc004@maduracollege.edu.in",
+        "email": "2022itc004@tmc.edu.in",
         "phone": "8621194495",
         "regno": "2022ITC004",
         "password": "padmesh@123",
@@ -269,7 +269,7 @@
     },
     {
         "name": "Pandimani",
-        "email": "2022itc005@maduracollege.edu.in",
+        "email": "2022itc005@tmc.edu.in",
         "phone": "8682096360",
         "regno": "2022ITC005",
         "password": "pandimani@123",
@@ -280,7 +280,7 @@
     },
     {
         "name": "Ponvasanth",
-        "email": "2022itc006@maduracollege.edu.in",
+        "email": "2022itc006@tmc.edu.in",
         "phone": "8662829592",
         "regno": "2022ITC006",
         "password": "ponvasanth@123",
@@ -291,7 +291,7 @@
     },
     {
         "name": "Rajesh",
-        "email": "2022itc007@maduracollege.edu.in",
+        "email": "2022itc007@tmc.edu.in",
         "phone": "8629617734",
         "regno": "2022ITC007",
         "password": "rajesh@123",
@@ -302,7 +302,7 @@
     },
     {
         "name": "Rajeshwari",
-        "email": "2022itc008@maduracollege.edu.in",
+        "email": "2022itc008@tmc.edu.in",
         "phone": "8642432665",
         "regno": "2022ITC008",
         "password": "rajeshwari@123",
@@ -313,7 +313,7 @@
     },
     {
         "name": "Prabhakaran",
-        "email": "2022itc009@maduracollege.edu.in",
+        "email": "2022itc009@tmc.edu.in",
         "phone": "8689717445",
         "regno": "2022ITC009",
         "password": "prabhakaran@123",
@@ -324,7 +324,7 @@
     },
     {
         "name": "RamPraveenKumar",
-        "email": "2022itc010@maduracollege.edu.in",
+        "email": "2022itc010@tmc.edu.in",
         "phone": "8610290562",
         "regno": "2022ITC010",
         "password": "rampraveenkumar@123",
@@ -338,7 +338,7 @@
 
     {
         "name" : "Rithick",
-        "email" : "2022csc101@maduracollege.edu.in",
+        "email" : "2022csc101@tmc.edu.in",
         "phone" : "8671506453",
         "regno" : "2022CSC001",
         "password" : "rithick@123",
@@ -349,7 +349,7 @@
        },
        {
         "name" : "Sakthipraksh",
-        "email" : "2022csc102@maduracollege.edu.in",
+        "email" : "2022csc102@tmc.edu.in",
         "phone" : "8606830301",
         "regno" : "2022CSC102",
         "password" : "sakthipraksh@123",
@@ -360,7 +360,7 @@
        },
        {
         "name" : "Selva",
-        "email" : "2022csc103@maduracollege.edu.in",
+        "email" : "2022csc103@tmc.edu.in",
         "phone" : "8647806688",
         "regno" : "2022CSC103",
         "password" : "selva@123",
@@ -371,7 +371,7 @@
        },
        {
         "name" : "Saran",
-        "email" : "2022csc104@maduracollege.edu.in",
+        "email" : "2022csc104@tmc.edu.in",
         "phone" : "8683286517",
         "regno" : "2022CSC104",
         "password" : "saran@123",
@@ -382,7 +382,7 @@
        },
        {
         "name" : "Sabarish",
-        "email" : "2022csc105@maduracollege.edu.in",
+        "email" : "2022csc105@tmc.edu.in",
         "phone" : "8666938980",
         "regno" : "2022CSC105",
         "password" : "sabarish@123",
@@ -393,7 +393,7 @@
        },
        {
         "name" : "Shanmugapraksh",
-        "email" : "2022csc106@maduracollege.edu.in",
+        "email" : "2022csc106@tmc.edu.in",
         "phone" : "8673019044",
         "regno" : "2022CSC106",
         "password" : "shanmugapraksh@123",
@@ -404,7 +404,7 @@
        },
        {
         "name" : "Sneka",
-        "email" : "2022csc107@maduracollege.edu.in",
+        "email" : "2022csc107@tmc.edu.in",
         "phone" : "8695455851",
         "regno" : "2022CSC107",
         "password" : "sneka@123",
@@ -415,7 +415,7 @@
        },
        {
         "name" : "Sridharini",
-        "email" : "2022csc108@maduracollege.edu.in",
+        "email" : "2022csc108@tmc.edu.in",
         "phone" : "8698547419",
         "regno" : "2022CSC108",
         "password" : "sridharini@123",
@@ -426,7 +426,7 @@
        },
        {
         "name" : "Sriram",
-        "email" : "2022csc109@maduracollege.edu.in",
+        "email" : "2022csc109@tmc.edu.in",
         "phone" : "8628816633",
         "regno" : "2022CSC109",
         "password" : "sriram@123",
@@ -437,7 +437,7 @@
        },
        {
         "name" : "Shurthika",
-        "email" : "2022csc110@maduracollege.edu.in",
+        "email" : "2022csc110@tmc.edu.in",
         "phone" : "8620417515",
         "regno" : "2022CSC110",
         "password" : "shurthika@123",
@@ -450,7 +450,7 @@
 
        {
         "name" : "Swathi",
-        "email" : "2023csc101@maduracollege.edu.in",
+        "email" : "2023csc101@tmc.edu.in",
         "phone" : "8638394286",
         "regno" : "2023CSC101",
         "password" : "swathi@123",
@@ -461,7 +461,7 @@
        },
        {
         "name" : "Vignesh M",
-        "email" : "2023csc102@maduracollege.edu.in",
+        "email" : "2023csc102@tmc.edu.in",
         "phone" : "8609482754",
         "regno" : "2023CSC102",
         "password" : "vignesh m@123",
@@ -472,7 +472,7 @@
        },
        {
         "name" : "Vignesh M",
-        "email" : "2023csc103@maduracollege.edu.in",
+        "email" : "2023csc103@tmc.edu.in",
         "phone" : "8642883754",
         "regno" : "2023CSC103",
         "password" : "vignesh m@123",
@@ -483,7 +483,7 @@
        },
        {
         "name" : "Hariram",
-        "email" : "2023csc104@maduracollege.edu.in",
+        "email" : "2023csc104@tmc.edu.in",
         "phone" : "8697126838",
         "regno" : "2023CSC104",
         "password" : "hariram@123",
@@ -494,7 +494,7 @@
        },
        {
         "name" : "Rengaraj",
-        "email" : "2023csc105@maduracollege.edu.in",
+        "email" : "2023csc105@tmc.edu.in",
         "phone" : "8661479751",
         "regno" : "2023CSC105",
         "password" : "rengaraj@123",
@@ -505,7 +505,7 @@
        },
        {
         "name" : "Ratchathira ",
-        "email" : "2023csc106@maduracollege.edu.in",
+        "email" : "2023csc106@tmc.edu.in",
         "phone" : "8645854770",
         "regno" : "2023CSC106",
         "password" : "ratchathira @123",
@@ -516,7 +516,7 @@
        },
        {
         "name" : "Karthikeyan ",
-        "email" : "2023csc107@maduracollege.edu.in",
+        "email" : "2023csc107@tmc.edu.in",
         "phone" : "8690527204",
         "regno" : "2023CSC107",
         "password" : "karthikeyan @123",
@@ -527,7 +527,7 @@
        },
        {
         "name" : "Jothi",
-        "email" : "2023csc108@maduracollege.edu.in",
+        "email" : "2023csc108@tmc.edu.in",
         "phone" : "8611332874",
         "regno" : "2023CSC108",
         "password" : "jothi@123",
@@ -538,7 +538,7 @@
        },
        {
         "name" : "Murugan",
-        "email" : "2023csc109@maduracollege.edu.in",
+        "email" : "2023csc109@tmc.edu.in",
         "phone" : "8642737787",
         "regno" : "2023CSC109",
         "password" : "murugan@123",
@@ -549,7 +549,7 @@
        },
        {
         "name" : "Sathishpandi",
-        "email" : "2023csc110@maduracollege.edu.in",
+        "email" : "2023csc110@tmc.edu.in",
         "phone" : "8614579134",
         "regno" : "2023CSC110",
         "password" : "sathishpandi@123",
@@ -562,7 +562,7 @@
 
        {
         "name" : "Muthukumar",
-        "email" : "2023itc001@maduracollege.edu.in",
+        "email" : "2023itc001@tmc.edu.in",
         "phone" : "8668845594",
         "regno" : "2023ITC001",
         "password" : "muthukumar@123",
@@ -573,7 +573,7 @@
        },
        {
         "name" : "Thalapathy",
-        "email" : "2023itc002@maduracollege.edu.in",
+        "email" : "2023itc002@tmc.edu.in",
         "phone" : "8609023078",
         "regno" : "2023ITC002",
         "password" : "thalapathy@123",
@@ -584,7 +584,7 @@
        },
        {
         "name" : "Surya",
-        "email" : "2023itc003@maduracollege.edu.in",
+        "email" : "2023itc003@tmc.edu.in",
         "phone" : "8693911802",
         "regno" : "2023ITC003",
         "password" : "surya@123",
@@ -595,7 +595,7 @@
        },
        {
         "name" : "Sathish",
-        "email" : "2023itc004@maduracollege.edu.in",
+        "email" : "2023itc004@tmc.edu.in",
         "phone" : "8639135943",
         "regno" : "2023ITC004",
         "password" : "sathish@123",
@@ -606,7 +606,7 @@
        },
        {
         "name" : "Thangamani",
-        "email" : "2023itc005@maduracollege.edu.in",
+        "email" : "2023itc005@tmc.edu.in",
         "phone" : "8639299619",
         "regno" : "2023ITC005",
         "password" : "thangamani@123",
@@ -617,7 +617,7 @@
        },
        {
         "name" : "Muniyandi",
-        "email" : "2023itc006@maduracollege.edu.in",
+        "email" : "2023itc006@tmc.edu.in",
         "phone" : "8623846423",
         "regno" : "2023ITC006",
         "password" : "muniyandi@123",
@@ -628,7 +628,7 @@
        },
        {
         "name" : "Ramganesh",
-        "email" : "2023itc007@maduracollege.edu.in",
+        "email" : "2023itc007@tmc.edu.in",
         "phone" : "8672879222",
         "regno" : "2023ITC007",
         "password" : "ramganesh@123",
@@ -639,7 +639,7 @@
        },
        {
         "name" : "Kodi",
-        "email" : "2023itc008@maduracollege.edu.in",
+        "email" : "2023itc008@tmc.edu.in",
         "phone" : "8645937502",
         "regno" : "2023ITC008",
         "password" : "kodi@123",
@@ -650,7 +650,7 @@
        },
        {
         "name" : "Monoj",
-        "email" : "2023itc009@maduracollege.edu.in",
+        "email" : "2023itc009@tmc.edu.in",
         "phone" : "8631329869",
         "regno" : "2023ITC009",
         "password" : "monoj@123",
@@ -661,7 +661,7 @@
        },
        {
         "name" : "SS Karthik",
-        "email" : "2023itc010@maduracollege.edu.in",
+        "email" : "2023itc010@tmc.edu.in",
         "phone" : "8684160934",
         "regno" : "2023ITC010",
         "password" : "ss karthik@123",
