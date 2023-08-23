@@ -80,7 +80,7 @@ const Attendance = () => {
         <>
             {loading && <Loader/>}
             {successLoading && <Loader/>}
-            {!error && !loading && !success&&<main className=" lg:p-8 lg:px-20 w-10/12 mx-auto mb-10">
+            {!error && !loading && !success&&!successLoading&&<main className=" lg:p-8 lg:px-20 w-10/12 mx-auto mb-10">
                 <section className="">
                     <div className="flex justify-between flex-col md:flex-row">
                         <h1 className="font-bold text-xl md:text-2xl uppercase md:tracking-wide">

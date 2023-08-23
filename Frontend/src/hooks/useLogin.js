@@ -42,7 +42,8 @@ const useLogin = () => {
             username: "",
             password :""
         } )
-    },[select])
+        dispatch(setError({}))
+    },[select,dispatch])
 
     const handleSubmit = async(e) => {
         e.preventDefault();
