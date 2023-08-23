@@ -34,7 +34,7 @@ const Report = () => {
                 {reportHook.error!=null && <div className='mt-3 font-bold text-black'>{ reportHook.error}</div>}
 
                 <div className='flex justify-center mt-2'>
-                    <button onClick={reportHook.handleSubmit} className='  px-4 py-1 rounded-md flex justify-center border-white bg-white font-bold text-rose-500 shadow-xl hover:bg-gray-300 w-full lg:w-auto text-center'>
+                    <button onClick={reportHook.handleSubmit} className='  px-4 py-2 rounded-md flex justify-center border-white bg-white font-bold text-rose-500 shadow-xl hover:bg-gray-300 w-full lg:w-auto text-center'>
                         <span className=' text-center mr-5'>Get</span>
                         {reportHook.report.loading && <MiniLoader className=""/>}
                     </button>

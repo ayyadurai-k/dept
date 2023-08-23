@@ -75,7 +75,7 @@ const StaffContent = () => {
                 <div className="flex justify-center mt-1">
                   <button
                     onClick={attendanceHook.handleSubmit}
-                    className="mt-2  px-4 py-1 rounded-md border-white bg-white font-bold text-rose-500 shadow-xl hover:bg-gray-300 w-full lg:w-auto "
+                    className="mt-2  px-4 py-2 rounded-md border-white bg-white font-bold text-rose-500 shadow-xl hover:bg-gray-300 w-full lg:w-auto "
                   >
                     Go
                   </button>

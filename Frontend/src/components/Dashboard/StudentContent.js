@@ -8,8 +8,8 @@ const StudentContent = () => {
     return (
         <>
             <Profile />
-          <div className=" w-3/4 rounded mx-auto mb-28">
-            <div className=" mx-auto">
+          <div className=" w-11/12 rounded mx-auto mb-28">
+            <div className="mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <Report />
                 <div>
