@@ -19,7 +19,7 @@ const Profile = () => {
   const date = useSelector(state => state.date)
 
   const handleGetIn = () => {
-    setLoading(true);
+   
     //check day 
     if (Number(date.day) === 0 || Number(date.day) === 6) {
       return setError("Sunday and Saturday Not Allowed...!")
