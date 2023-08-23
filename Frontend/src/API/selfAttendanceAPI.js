@@ -16,8 +16,6 @@ export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
         navigator.geolocation.getCurrentPosition(async (position) => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-            // const latitude = 9.911151567126199;
-            // const longitude = 78.1089191218433;
             try {
                 await axios.post('/staff/self-attendance', { latitude, longitude })
                 setGetIn(true)

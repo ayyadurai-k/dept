@@ -1,15 +1,10 @@
-const { Navigator } = require('node-navigator')
-
-
 exports.checkLocation = (latitudude, longtitude) => {
-
-    const navigator = new Navigator();
 
     // Set the desired location and radius
     //college latitude and longitude
-    const desiredLatitude = 9.91137484395308;
-    const desiredLongitude = 78.10902886764889;
-    const radius = 0.5; // in km
+    const desiredLatitude = 9.911380910910434;
+    const desiredLongitude = 78.10882690671424;
+    const radius = 0.1; // in km
 
     //user latitude
     const userLatitude = latitudude;
