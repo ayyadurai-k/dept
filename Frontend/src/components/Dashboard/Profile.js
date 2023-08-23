@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -8,19 +8,46 @@ import logoutAPI from '../../API/logoutAPI';
 import profile from '../../assets/profile.png';
 import { selfAttendance } from '../../API/selfAttendanceAPI';
 import MiniLoader from '../MiniLoader';
+import { getLocation } from '../../utils/location';
 
 const Profile = () => {
   const { user } = useSelector((state) => state.user);
   const [getIn, setGetIn] = useState(user.getIn);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const date = useSelector(state=>state.date)
+  const [location, setLocation] = useState(null);
+  const date = useSelector(state => state.date)
 
-  const handleGetIn = async () => {
-      setLoading(true);
-      await selfAttendance(setError,setGetIn,setLoading,date);
-      setLoading(false)
+  const handleGetIn = () => {
+    setLoading(true);
+    //check day 
+    if (Number(date.day) === 0 || Number(date.day) === 6) {
+      return setError("Sunday and Saturday Not Allowed...!")
+    }
+    // //check time only 8.45am to 10 am
+    // if (Number(date.hours) < 8 || Number(date.hours) > 9) {
+    //   return setError("Only 8am to 10am is Open...!")
+    // }
+    getLocation(setError, setLocation);
   }
+
+  useEffect(() => {
+    if (location) {
+      async function api() {
+        try {
+          setLoading(true)
+          await selfAttendance(location);
+          setGetIn(true)
+        }
+        catch(error){
+           setError(error.response.data.message)
+        }
+        finally{
+          setLoading(false)
+        }     
+      } api()
+    }
+  },[location])
 
   return (
     <>
@@ -37,10 +64,10 @@ const Profile = () => {
                 <div className='flex justify-center mt-5'>
                   {user.data.position && <button disabled={getIn ? true : false} onClick={handleGetIn} className={`px-3 py-2 flex justify-between ${getIn ? 'bg-green-600 hover:bg-green-700' : 'bg-[#8671F0]'} ${getIn && 'cursor-not-allowed'} font-bold hover:bg-[#674cf0] tracking-wide shadow-xl text-md text-white rounded-xl`}>
                     <span>{getIn ? 'Done' : "I'v Came"}</span>
-                    {loading && <span className='ml-2'><MiniLoader /></span>}
+                    <span className='ml-2'>{loading && <MiniLoader />}</span>
                   </button>}
                 </div>
-                {error&&<h2 className='text-sm md:text-lg text-center mt-2 text-red-700 font-bold italic'>{error}</h2>}
+                {error && <h2 className='text-sm md:text-lg text-center mt-2 text-red-700 font-bold italic'>{error}</h2>}
               </div>
             </div>
           </div>
