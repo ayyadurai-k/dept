@@ -28,6 +28,7 @@ const Profile = () => {
     // if (Number(date.hours) < 8 || Number(date.hours) > 9) {
     //   return setError("Only 8am to 10am is Open...!")
     // }
+    setLoading(true);
     getLocation(setError, setLocation);
   }
 
@@ -35,7 +36,6 @@ const Profile = () => {
     if (location) {
       async function api() {
         try {
-          setLoading(true)
           await selfAttendance(location);
           setGetIn(true)
         }
