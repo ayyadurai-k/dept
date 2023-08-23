@@ -7,10 +7,10 @@ export const selfAttendance = async (setError, setGetIn, setLoading,date) => {
         return setError("Sunday and Saturday Not Allowed...!")
     }
 
-    // //check time only 8.45am to 10 am
-    // if(Number(date.hours)<8 || Number(date.hours)>9){
-    //     return setError("Only 8am to 10am is Open...!")
-    // }
+    //check time only 8.45am to 10 am
+    if(Number(date.hours)<8 || Number(date.hours)>9){
+        return setError("Only 8am to 10am is Open...!")
+    }
     
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(async (position) => {
