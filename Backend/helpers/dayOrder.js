@@ -1,18 +1,23 @@
-const axios = require('axios');
-const {JSDOM} = require("jsdom");
+const puppeteer = require('puppeteer');
 
 
-exports.getDayOrder=async()=>{
-    let dayOrder;
-   await axios
-  .get("https://www.maduracollege.edu.in/")
-  .then((response)=> {
-    const dom = new JSDOM(response.data);
-       const result = dom.window.document.querySelector('.day-order-part span').innerHTML;
-    dayOrder=result.trim()
-   }).catch((error)=>{
-        dayOrder = null
-   });
+exports.getDayOrder = async () => {
+   let dayOrder;
+   try {
+      const browser = await puppeteer.launch({ headless: false });
+      const page = await browser.newPage();
+      await page.goto("https://www.maduracollege.edu.in/", { waitUntil: "domcontentloaded" })
+      const result = await page.evaluate(() => {
+         return document.querySelector('.day-order-part span').textContent;
+      })
+      browser.close();
+     dayOrder = result.trim();
 
+   }
+   catch(error){
+      console.log("called");
+      dayOrder = null
+   }
+   console.log(dayOrder);
    return dayOrder
 }
