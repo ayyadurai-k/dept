@@ -37,14 +37,14 @@ const Profile = () => {
       async function api() {
         try {
           await selfAttendance(location);
-          setGetIn(true)
+          setGetIn(true);
+          setError(null);
         }
         catch(error){
            setError(error.response.data.message)
         }
         finally{
           setLoading(false)
-          
         }     
       } api()
     }
