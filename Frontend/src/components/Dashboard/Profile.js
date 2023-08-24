@@ -19,11 +19,11 @@ const Profile = () => {
   const date = useSelector(state => state.date)
 
   const handleGetIn = () => {
-   
-    //check day 
-    if (Number(date.day) === 0 || Number(date.day) === 6) {
-      return setError("Sunday and Saturday Not Allowed...!")
-    }
+
+    // //check day 
+    // if (Number(date.day) === 0 || Number(date.day) === 6) {
+    //   return setError("Sunday and Saturday Not Allowed...!")
+    // }
     // //check time only 8.45am to 10 am
     // if (Number(date.hours) < 8 || Number(date.hours) > 9) {
     //   return setError("Only 8am to 10am is Open...!")
@@ -40,15 +40,15 @@ const Profile = () => {
           setGetIn(true);
           setError(null);
         }
-        catch(error){
-           setError(error.response.data.message)
+        catch (error) {
+          setError(error.response.data.message)
         }
-        finally{
+        finally {
           setLoading(false)
-        }     
+        }
       } api()
     }
-  },[location])
+  }, [location])
 
   return (
     <>
@@ -63,7 +63,7 @@ const Profile = () => {
                 <h3 className='text-[12px]  font-bold  mt-2 break-all'>{user.data.email}</h3>
                 <h3 className='mt-1 font-bold'>Department Of CS & IT</h3>
                 <div className='flex justify-center mt-5'>
-                  {user.data.position && <button disabled={getIn || loading ? true : false} onClick={handleGetIn} className={`px-3 py-2 flex justify-between ${getIn ? 'bg-green-600 hover:bg-green-700' : 'bg-[#8671F0]'} ${getIn && 'cursor-not-allowed'} ${loading&&'cursor-not-allowed'} font-bold hover:bg-[#674cf0] tracking-wide shadow-xl text-md text-white rounded-xl`}>
+                  {user.data.position && <button disabled={getIn || loading ? true : false} onClick={handleGetIn} className={`px-3 py-2 flex justify-between ${getIn ? 'bg-green-600 hover:bg-green-700' : 'bg-[#8671F0]'} ${getIn && 'cursor-not-allowed'} ${loading && 'cursor-not-allowed'} font-bold hover:bg-[#674cf0] tracking-wide shadow-xl text-md text-white rounded-xl`}>
                     <span>{getIn ? 'Done' : "I'v Came"}</span>
                     <span className='ml-2'>{loading && <MiniLoader />}</span>
                   </button>}
