@@ -9,7 +9,6 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors')
 const {automaticStaffAttendance} = require('./helpers/attendanceHelpers');
 const { getDate, getYear } = require('./helpers/dateTimeHelper');
-const { getDayOrder } = require('./helpers/dayOrder');
 
 
 //config file
@@ -33,7 +32,6 @@ app.use(express.json());// get and put json files
 
 app.use(route);
 app.get('/date',async(req,res)=>{
-    const dayOrder =await getDayOrder();
     res.status(200).json({
         fulldate : getDate(),
         date:new Date().getDate(),
@@ -41,7 +39,6 @@ app.get('/date',async(req,res)=>{
         year : getYear(),
         day : new Date().getDay(),
         hours:new Date().getHours(),
-        dayOrder 
     })
 })
 

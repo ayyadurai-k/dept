@@ -36,17 +36,10 @@ const Home = () => {
     // if day order equal to 1
     const [dayOrder, setDayOrder] = useState(date.day);
     useEffect(() => {
-        let order;
-        if(!date.dayOrder==="-" && !date.dayOrder===null){
-            order = Number(date.dayOrder)
-        }
-        else{
-            order=date.dayOrder;
-        }
-        console.log(order);
-        setDayOrder(order);
+        
+        setDayOrder(date.day);
         dispatch(changeSelect(1))
-    }, [dispatch, date.dayOrder]);
+    }, [dispatch, date.day]);
 
 
     return (
