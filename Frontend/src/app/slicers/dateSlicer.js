@@ -3,12 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const dateSlice =createSlice({
     name:'date',
     initialState:{
-        
+        loading : true
     },
     reducers:{
+        
         setDate(state,{payload}){
             return {
-                ...payload
+                ...payload,
+                loading:false
             }
         }
     }

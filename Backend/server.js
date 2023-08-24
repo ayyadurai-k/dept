@@ -9,6 +9,9 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors')
 const {automaticStaffAttendance} = require('./helpers/attendanceHelpers');
 const { getDate, getYear } = require('./helpers/dateTimeHelper');
+const { getDayOrder } = require('./helpers/dayOrder');
+
+
 //config file
 dotenv.config({path:path.join(__dirname,"config","config.env")});
 
@@ -29,14 +32,16 @@ app.use(cookieParser())
 app.use(express.json());// get and put json files
 
 app.use(route);
-app.get('/date',(req,res)=>{
+app.get('/date',async(req,res)=>{
+    const dayOrder =await getDayOrder();
     res.status(200).json({
         fulldate : getDate(),
         date:new Date().getDate(),
         month: new Date().toLocaleString('default',{month : 'short'}).toUpperCase(),
         year : getYear(),
         day : new Date().getDay(),
-        hours:new Date().getHours()
+        hours:new Date().getHours(),
+        dayOrder 
     })
 })
 
