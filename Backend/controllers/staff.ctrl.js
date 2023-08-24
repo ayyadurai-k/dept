@@ -185,7 +185,6 @@ exports.postAttendanceData = catchAsyncError(async (req, res, next) => {
 
 // url : /staff/self-attendance
 exports.selfAttendance = catchAsyncError(async (req, res, next) => {
-  console.log("Called");
   //get email
   const email = req.user.email;
   const {latitude,longitude}=req.body;

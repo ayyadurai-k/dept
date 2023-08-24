@@ -4,13 +4,12 @@ exports.checkLocation = (latitudude, longtitude) => {
     //college latitude and longitude
     const desiredLatitude = 9.865221489551008 ;
     const desiredLongitude = 78.12399450513153;
-    const radius = 0.1; // in km
+    const radius = 0.12; // in km
 
     //user latitude
     const userLatitude = latitudude;
     const userLongitude = longtitude;
 
-    console.log(userLatitude, userLongitude);
     // Calculate the distance between the user's location and the desired location using the Haversine formula
     const R = 6371; // Earth's radius in km
     const dLat = (userLatitude - desiredLatitude) * (Math.PI / 180);
