@@ -66,8 +66,8 @@ const Contact = () => {
                     </svg>
 
                     <span className="ml-2 font-bold break-all">
-                      <Link to="mailto:rajasaravanakumar.itcs@maduracollege.edu.in">
-                      rajasaravanakumar.itcs@maduracollege.edu.in
+                      <Link to="mailto:rajasaravanakumar.itcs@tmc.edu.in">
+                      rajasaravanakumar.itcs@tmc.edu.in
                       </Link>
                     </span>
                   </label>

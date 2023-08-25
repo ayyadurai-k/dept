@@ -2,9 +2,9 @@ exports.checkLocation = (latitude, longitude) => {
 
     // Set the desired location and radius
     //college latitude and longitude
-    const desiredLatitude = 9.865221489551008 ;
-    const desiredLongitude = 78.12399450513153;
-    const radius = 0.2; // in km
+    const desiredLatitude = 9.911173282865901;
+    const desiredLongitude = 78.10891275481929;
+    const radius = 0.15; // in km
 
     //user latitude
     const userLatitude = latitude;

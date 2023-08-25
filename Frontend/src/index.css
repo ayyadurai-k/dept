@@ -6,6 +6,10 @@
     font-family: 'Poppins',sans-serif;
     user-select: none;
 }
+button:focus{
+    outline:none;
+}
+
 @layer components{
     .link{
         @apply text-amber-400 font-bold font-poppins m-5 hover:bg-amber-400  hover:text-black px-3 py-2 rounded-lg;

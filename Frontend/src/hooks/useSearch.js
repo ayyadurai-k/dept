@@ -17,15 +17,17 @@ const useSearch = () => {
 
     const handleSubmit = async(e) => {
         if (!input.trim()) {
+            setSearchResult(null);
             return setError("RegNo is Required")
         }
         else if (input.length  !== 10) {
+            setSearchResult(null);
             return setError("RegNo Only 10 Character !")
         }
-        else if(!input.toUpperCase().includes('ITC') && !input.toUpperCase().includes('CSC')){
+        else if(!(input.toUpperCase().includes('ITC')) && !(input.toUpperCase().includes('CSC'))){
+            setSearchResult(null);        
             return setError("CS & IT Are Only Allowed")
         }
-        
         setError(null)
         try {
             setLoad(true);
@@ -37,7 +39,6 @@ const useSearch = () => {
             })
         }
         catch (err) {
-    
             setSearchResult(null);
         }
         finally{
