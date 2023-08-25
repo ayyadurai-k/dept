@@ -129,11 +129,16 @@ exports.getAttendancePage = catchAsyncError(async (req, res, next) => {
 
 //url : /staff/attendance(post)
 exports.postAttendanceData = catchAsyncError(async (req, res, next) => {
+
+  //disable sunday attendance
+  if(new Date().getDate()==0){
+    return next(new ErrorHandler("Cannot Post Attendance On Sunday...!",400))
+  }
   // get absent student data
   const attendanceData = req.body;
 
   if (!attendanceData) {
-    next(new ErrorHandler("Attendance Data is Must Required", 400));
+   return next(new ErrorHandler("Attendance Data is Must Required", 400));
   }
 
   //get dept and year
@@ -162,9 +167,7 @@ exports.postAttendanceData = catchAsyncError(async (req, res, next) => {
   if (!studentsData.length) {
     return next(new ErrorHandler("No matched Student data", 400));
   }
-
-
-
+  
   // take key form studentAttendance data
   const regNos = Object.keys(attendanceData);
 
@@ -196,11 +199,11 @@ exports.selfAttendance = catchAsyncError(async (req, res, next) => {
 
   console.log(latitude,longitude);
   
-  const inCollege = checkLocation(Number(latitude),Number(longitude));
+  // const inCollege = checkLocation(Number(latitude),Number(longitude));
 
-  if(!inCollege){
-      return next(new ErrorHandler("You're Not In The College...!",400))
-  }
+  // if(!inCollege){
+  //     return next(new ErrorHandler("You're Not In The College...!",400))
+  // }
 
 
   // check if attendance is already uploaded or not

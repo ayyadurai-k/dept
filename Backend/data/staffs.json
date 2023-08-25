@@ -1,74 +1,83 @@
 [
     {
-        "name" : "Brindha",
-        "email" :"brindha.itcs@tmc.edu.in",
-        "phone" : "7388913417",
-        "password" : "brindha@123",
-        "DOB" : "29-10-1987",
-        "gender" : "Female",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Rajasaravanakumar",
-        "email" :"rajasaravanakumar.itcs@tmc.edu.in",
-        "phone" : "7366001243",
-        "password" : "raja@123",
-        "DOB" : "11-02-1983",
-        "gender" : "Male",
-        "position" : "HOD" 
-       },
-       {
-        "name" : "Ashok",
-        "email" :"ashok.itcs@tmc.edu.in",
-        "phone" : "7338214269",
-        "password" : "ashok@123",
-        "DOB" : "29-06-1982",
-        "gender" : "Male",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Radhakrishnan",
-        "email" :"radhakrishnan.itcs@tmc.edu.in",
-        "phone" : "7388467443",
-        "password" : "rk@123",
-        "DOB" : "07-11-1989",
-        "gender" : "Male",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Imaya",
-        "email" :"imaya.itcs@tmc.edu.in",
-        "phone" : "7342599985",
-        "password" : "imaya@123",
-        "DOB" : "11-11-1981",
-        "gender" : "Female",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Tamilselvi",
-        "email" :"tamilselvi.itcs@tmc.edu.in",
-        "phone" : "7325191520",
-        "password" : "tamilselvi@123",
-        "DOB" : "27-08-1981",
-        "gender" : "Female",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Laksha",
-        "email" :"laksha.itcs@tmc.edu.in",
-        "phone" : "7399035270",
-        "password" : "laksha@123",
-        "DOB" : "09-11-1985",
-        "gender" : "Female",
-        "position" : "STAFF" 
-       },
-       {
-        "name" : "Vairameenakshi",
-        "email" :"vairameenakshi.itcs@tmc.edu.in",
-        "phone" : "7370245030",
-        "password" : "vairameenakshi@123",
-        "DOB" : "14-11-1986",
-        "gender" : "Female",
-        "position" : "STAFF" 
-       }
+        "name": "Demo",
+        "email": "demo.itcs@tmc.edu.in",
+        "phone": "8456789867",
+        "password": "demo@123",
+        "DOB": "01-06-1986",
+        "gender": "Male",
+        "position": "STAFF"
+    },
+    {
+        "name": "Brindha",
+        "email": "brindha.itcs@tmc.edu.in",
+        "phone": "7388913417",
+        "password": "brindha@123",
+        "DOB": "29-10-1987",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Rajasaravanakumar",
+        "email": "rajasaravanakumar.itcs@tmc.edu.in",
+        "phone": "7366001243",
+        "password": "raja@123",
+        "DOB": "11-02-1983",
+        "gender": "Male",
+        "position": "HOD"
+    },
+    {
+        "name": "Ashok",
+        "email": "ashok.itcs@tmc.edu.in",
+        "phone": "7338214269",
+        "password": "ashok@123",
+        "DOB": "29-06-1982",
+        "gender": "Male",
+        "position": "STAFF"
+    },
+    {
+        "name": "Radhakrishnan",
+        "email": "radhakrishnan.itcs@tmc.edu.in",
+        "phone": "7388467443",
+        "password": "rk@123",
+        "DOB": "07-11-1989",
+        "gender": "Male",
+        "position": "STAFF"
+    },
+    {
+        "name": "Imaya",
+        "email": "imaya.itcs@tmc.edu.in",
+        "phone": "7342599985",
+        "password": "imaya@123",
+        "DOB": "11-11-1981",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Tamilselvi",
+        "email": "tamilselvi.itcs@tmc.edu.in",
+        "phone": "7325191520",
+        "password": "tamilselvi@123",
+        "DOB": "27-08-1981",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Laksha",
+        "email": "laksha.itcs@tmc.edu.in",
+        "phone": "7399035270",
+        "password": "laksha@123",
+        "DOB": "09-11-1985",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Vairameenakshi",
+        "email": "vairameenakshi.itcs@tmc.edu.in",
+        "phone": "7370245030",
+        "password": "vairameenakshi@123",
+        "DOB": "14-11-1986",
+        "gender": "Female",
+        "position": "STAFF"
+    }
 ]

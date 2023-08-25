@@ -156,7 +156,7 @@ const Attendance = () => {
                     <section className='my-auto w-full '>
                         <div className='w-3/4 p-2 rounded-lg mx-auto mt-20'>
                             <h1 className='font-bold text-xl md:text-2xl text-center'>Success</h1>
-                            <p className='bg-green-500 w-full rounded-lg  font-bold text-lg text-center my-3'>Attendance Posted Succesfully...!</p>
+                            <p className='bg-green-500 w-full rounded-lg  font-bold text-lg text-center my-3'>Attendance Posted Successfully...!</p>
                             <p className='font-bold text-md text-center text-gray-800'>
                                 <Link to={'/staff'}>Please Go Back</Link>
                             </p>
