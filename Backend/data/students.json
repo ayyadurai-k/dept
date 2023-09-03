@@ -1,5 +1,16 @@
 [
     {
+        "name": "Demo Student",
+        "email": "demostudent@tmc.edu.in",
+        "phone": 3151789176,
+        "gender": "Female",
+        "regno": "0000000000",
+        "password": "demo@123",
+        "DOB": "02-03-2003",
+        "dept": "IT",
+        "year": 3
+    },
+    {
         "name": "Aarthy",
         "email": "2021itc001@tmc.edu.in",
         "phone": 3456789876,
@@ -409,7 +420,7 @@
         "regno" : "2022CSC107",
         "password" : "sneka@123",
         "DOB" : "01-01-2004",
-        "gender" : "Female ",
+        "gender" : "Female",
         "dept" : "CS",
         "year" : "2"
        },

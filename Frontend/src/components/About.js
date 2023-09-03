@@ -24,7 +24,7 @@ const About = () => {
                                 The Madura College
                             </h1>
                             <p className="w-[60%] mt-5 mx-auto text-center font-bold text-gray-700">
-                            The Madura College established in 1856, is one of the oldest academic institutions in Madurai, India. It is an autonomous arts and science college affiliated to the Madurai Kamaraj University.  
+                            The Madura College established in 1889, is one of the oldest academic institutions in Madurai, India. It is an autonomous arts and science college affiliated to the Madurai Kamaraj University.  
                             </p>
                         </div>
                     </section>
