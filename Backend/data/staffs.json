@@ -9,6 +9,52 @@
         "position": "STAFF"
     },
     {
+        "name": "Rajalakshmi",
+        "email": "rajalakshmi.itcs@tmc.edu.in",
+        "phone": "8156589867",
+        "password": "raji@123",
+        "DOB": "10-06-1986",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Saranya",
+        "email": "saranya.itcs@tmc.edu.in",
+        "phone": "8256589837",
+        "password": "saranya@123",
+        "DOB": "16-05-1989",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    
+    {
+        "name": "Geetha",
+        "email": "geetha.itcs@tmc.edu.in",
+        "phone": "9276689817",
+        "password": "geetha@123",
+        "DOB": "22-05-1980",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Sasikala",
+        "email": "sasikala.itcs@tmc.edu.in",
+        "phone": "9376679867",
+        "password": "sasikala@123",
+        "DOB": "22-05-1980",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
+        "name": "Ramadevi",
+        "email": "ramadevi.itcs@tmc.edu.in",
+        "phone": "9016609817",
+        "password": "ramadevi@123",
+        "DOB": "31-12-1980",
+        "gender": "Female",
+        "position": "STAFF"
+    },
+    {
         "name": "Brindha",
         "email": "brindha.itcs@tmc.edu.in",
         "phone": "7388913417",

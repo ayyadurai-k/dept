@@ -202,11 +202,11 @@ exports.selfAttendance = catchAsyncError(async (req, res, next) => {
 
   console.log(latitude,longitude);
   
-  // const inCollege = checkLocation(Number(latitude),Number(longitude));
+  const inCollege = checkLocation(Number(latitude),Number(longitude));
 
-  // if(!inCollege){
-  //     return next(new ErrorHandler("You're Not In The College...!",400))
-  // }
+  if(!inCollege){
+      return next(new ErrorHandler("You're Not In The College...!",400))
+  }
 
 
   // check if attendance is already uploaded or not

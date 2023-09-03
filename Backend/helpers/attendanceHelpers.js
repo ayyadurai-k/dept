@@ -45,9 +45,9 @@ const giveStaffAttendance = async (email, attendanceBool) => {
 //codes for schduled jobs
 const giveAutomaticAttendance = async () => {
 
-  // if(new Date().getDay()===0 || new Date().getDay()===6){
-  //     return;
-  // }
+  if(new Date().getDay()===0 || new Date().getDay()===6){
+      return;
+  }
 
   // get current Date
   const currentDate = getDate();
@@ -88,7 +88,7 @@ const giveAutomaticAttendance = async () => {
 // codes for schdule
 const automaticStaffAttendance = () => {
   //schedule job for every day at 10am
-  schedule.scheduleJob("0 12 * * *", giveAutomaticAttendance);
+  schedule.scheduleJob("0 10 * * *", giveAutomaticAttendance);
 };
 
 //convert boolean into counting
