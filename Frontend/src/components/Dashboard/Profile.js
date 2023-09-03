@@ -20,15 +20,15 @@ const Profile = () => {
 
   const handleGetIn = () => {
 
-    //check day 
-    if (Number(date.day) === 0 || Number(date.day) === 6) {
-      return setError("Sunday and Saturday Not Allowed...!")
-    }
+    // //check day 
+    // if (Number(date.day) === 0 || Number(date.day) === 6) {
+    //   return setError("Sunday and Saturday Not Allowed...!")
+    // }
 
-    //check time only 8.45am to 10 am
-    if (Number(date.hours) < 8 || Number(date.hours) > 9) {
-      return setError("Only 8am to 10am is Open...!")
-    }
+    // //check time only 8.45am to 10 am
+    // if (Number(date.hours) < 8 || Number(date.hours) > 9) {
+    //   return setError("Only 8am to 10am is Open...!")
+    // }
     
     setLoading(true);
     getLocation(setError, setLocation);

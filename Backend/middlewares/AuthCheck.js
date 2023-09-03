@@ -23,7 +23,7 @@ exports.staffAuthCheck=async(req,res,next)=>{
     //verify token if correct data is returned
     jwt.verify(jwtToken, process.env.JWT_SECRET_KEY,(err,decoded)=>{
           if(err){
-            return next(new ErrorHandler("Wrong or Exxpired Token Is Not Allowed Token is Not Allowed please login again",400))
+            return next(new ErrorHandler("Wrong or Expired Token Is Not Allowed Token is Not Allowed please login again",400))
           }
           else{
              data = decoded;
