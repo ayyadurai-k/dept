@@ -22,10 +22,5 @@ exports.checkLocation = (latitude, longitude) => {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const distance = R * c;
 
-    // Check if the user is within the desired location or not
-    if (distance <= radius) {
-        return true
-    } else {
-        return false
-    }
+    return distance <= radius ;
 }
