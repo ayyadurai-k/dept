@@ -1,6 +1,6 @@
 const express = require('express');
 const { studentLoginPost,getStudentDashboard, studentLogout, getStudentsAttendanceReport } = require('../controllers/student.ctrl');
-const { staffLoginPost, getStaffDashboard ,staffLogout, getAttendancePage, postAttendanceData, selfAttendance, getOneClass, getStaffAttendanceReport, getOneClassAttendanceReport, getOneStudent, getStaffs} = require('../controllers/staff.ctrl');
+const { staffLoginPost, getStaffDashboard ,staffLogout, getAttendancePage, postAttendanceData, selfAttendance, getOneClass, getStaffAttendanceReport, getOneClassAttendanceReport, getOneStudent, getStaffs, getStudentsWithHighAttendance, getStudentsWithFullAttendance} = require('../controllers/staff.ctrl');
 const { studentAuthCheck ,staffAuthCheck} = require('../middlewares/AuthCheck');
 const { hodCheck } = require('../middlewares/hodCheck');
 
@@ -35,6 +35,8 @@ route.get('/staff/class/:dept/:year', staffAuthCheck,getOneClass);
 
 //get one class attendance report
 route.get('/staff/students/details/:dept/:year/:month', staffAuthCheck, getOneClassAttendanceReport);
+route.get('/staff/students/attendance/above/75/:dept/:year/:month', staffAuthCheck, getStudentsWithHighAttendance);
+route.get('/staff/students/attendance/full/:dept/:year/:month', staffAuthCheck, getStudentsWithFullAttendance);
 
 // get staff self attendance report
 route.get('/staff/self-attendance/report/:month', staffAuthCheck, getStaffAttendanceReport);
