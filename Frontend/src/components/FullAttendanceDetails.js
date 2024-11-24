@@ -1,7 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { getClass } from "../utils/class";
 import { useEffect, useState } from "react";
-import { fetchFullAttendance, getAttendanceData } from "../API/attendanceAPI";
+import {
+  downloadAttendanceCertificate,
+  fetchFullAttendance,
+  getAttendanceData,
+} from "../API/attendanceAPI";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
 
@@ -17,8 +21,6 @@ const FullAttendanceDetails = () => {
     async function api() {
       try {
         setLoading(true);
-        console.log("dept, year, month : ", dept, year, month);
-
         const { data } = await fetchFullAttendance(dept, year, month);
         setDetails(data.data);
       } catch (error) {
@@ -29,6 +31,14 @@ const FullAttendanceDetails = () => {
     }
     api();
   }, [dept, year, month]);
+
+  const handleCertificateDownload = async (regno) => {
+    try {
+      await downloadAttendanceCertificate(regno, month);
+    } catch (error) {
+      setError(error.response.data.message);
+    }
+  };
   return (
     <>
       {loading && <Loader />}
@@ -37,7 +47,7 @@ const FullAttendanceDetails = () => {
           <section className="bg-white w-11/12  border border-black mx-auto rounded-xl p-5 mt-5 mb-16">
             <div className="flex justify-between">
               <h1 className="font-bold text-black text-2xl center">
-                {getClass(dept, year)}
+                {getClass(dept, year)} - 100 % Attendance Students
               </h1>
               <Link
                 to={"/staff"}
@@ -53,6 +63,7 @@ const FullAttendanceDetails = () => {
                     <th className="p-3">RegNo</th>
                     <th className="p-3">Present</th>
                     <th className="p-3">Absent</th>
+                    <th className="p-3">Action</th>
                   </tr>
                 </thead>
                 <tbody className="text-center font-bold divide-y divide-gray-800">
@@ -63,9 +74,37 @@ const FullAttendanceDetails = () => {
                         className={`${sNo % 2 === 0 && "bg-blue-300"} `}
                         key={detail.regno}
                       >
-                        <td className="p-2 ">{detail.regno}</td>
-                        <td className="p-2 ">{detail.present}</td>
-                        <td className="p-2 ">{detail.absent}</td>
+                        <td className="p-2 ">{detail?.regno}</td>
+                        <td className="p-2 ">{detail?.present}</td>
+                        <td className="p-2 ">{detail?.absent}</td>
+                        <td className="p-2  flex justify-center">
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleCertificateDownload(detail?.regno);
+                            }}
+                            className="flex items-center justify-center space-x-2 cursor-pointer "
+                          >
+                            <span>Download Certificate</span>
+                            <span className="font-bold">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="size-1"
+                                width="30" // Set desired width here
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                        </td>
                       </tr>
                     );
                   })}

@@ -37,7 +37,7 @@ const HighAttendanceDetails = () => {
           <section className="bg-white w-11/12  border border-black mx-auto rounded-xl p-5 mt-5 mb-16">
             <div className="flex justify-between">
               <h1 className="font-bold text-black text-2xl center">
-                {getClass(dept, year)}
+                {getClass(dept, year)} - 75 % Attendance Students
               </h1>
               <Link
                 to={"/staff"}
@@ -101,27 +101,6 @@ const HighAttendanceDetails = () => {
                   </div>
                 );
               })}
-            </div>
-            <div>
-              <div className="flex justify-end mt-3 mr-3">
-                <Link
-                  to={`/staff/${dept}/${year}/${month}/75/attendance/`}
-                  className="rounded-lg bg-black font-bold text-md px-3.5 py-1.5 mx-2"
-                >
-                  <label className="cursor-pointer text-white ">
-                    <span>{"Above 75 % >"}</span>
-                  </label>
-                </Link>
-
-                <Link
-                  to={`/staff/${dept}/${year}/${month}/full/attendance/`}
-                  className="rounded-lg bg-black font-bold text-md px-3.5 py-1.5 mx-2"
-                >
-                  <label className="cursor-pointer text-white ">
-                    {"100 % >"}
-                  </label>
-                </Link>
-              </div>
             </div>
           </section>
         </main>

@@ -106,7 +106,7 @@ const AttendanceDetails = () => {
                   className="rounded-lg bg-black font-bold text-md px-3.5 py-1.5 mx-2"
                 >
                   <label className="cursor-pointer text-white ">
-                    <span>{"Above 75 % >"}</span>
+                    <span>{"75 % Attendance Students"}</span>
                   </label>
                 </Link>
 
@@ -114,7 +114,9 @@ const AttendanceDetails = () => {
                   to={`/staff/${dept}/${year}/${month}/full/attendance/`}
                   className="rounded-lg bg-black font-bold text-md px-3.5 py-1.5 mx-2"
                 >
-                  <label className="cursor-pointer text-white ">{"100 % >" }</label>
+                  <label className="cursor-pointer text-white ">
+                    {"100 % Attendance Students"}
+                  </label>
                 </Link>
               </div>
             </div>
