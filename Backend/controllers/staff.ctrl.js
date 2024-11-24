@@ -90,9 +90,9 @@ exports.getStaffDashboard = catchAsyncError(async (req, res, next) => {
 // url : /staff/attendance (get)
 exports.getAttendancePage = catchAsyncError(async (req, res, next) => {
   //disable sunday attendance
-  // if (new Date().getDay() == 0) {
-  //   return next(new ErrorHandler("Cannot Post Attendance At Sunday...!", 400));
-  // }
+  if (new Date().getDay() == 0) {
+    return next(new ErrorHandler("Cannot Post Attendance At Sunday...!", 400));
+  }
 
   // getting department and years for take students data
   const { dept, year } = req.params;
