@@ -15,35 +15,54 @@ import AttendanceDetails from "./components/AttendanceDetails";
 import StaffDetails from "./components/StaffDetails";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import setDT from './app/actions/setDT'
+import setDT from "./app/actions/setDT";
+import HighAttendanceDetails from "./components/HighAttendanceDetails";
+import FullAttendanceDetails from "./components/FullAttendanceDetails";
 
 function App() {
-  const {select} = useSelector((state)=>state.navbar)
-  const dispatch =useDispatch();
+  const { select } = useSelector((state) => state.navbar);
+  const dispatch = useDispatch();
 
-  useEffect(()=>{
-      setDT(dispatch);
-  },[dispatch])
+  useEffect(() => {
+    setDT(dispatch);
+  }, [dispatch]);
 
   return (
     <>
       <Header />
-  
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/staff" element={<Staff/>} />
-        <Route path="/student" element={<Student/>} />
-        <Route path="/details/:dept/:year" element={<Details/>}/>
-        <Route path="/details/staff" element={<StaffDetails/>}/>
-        <Route path="/attendance-details/:dept/:year/:month" element={<AttendanceDetails/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/attendance/:dept/:year" element={<Attendance/>}/>
-        <Route path="/error" element={<Error/>}/>
-        <Route path="*" element={<PageNotFound/>}/>
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/student" element={<Student />} />
+        <Route path="/details/:dept/:year" element={<Details />} />
+        <Route path="/details/staff" element={<StaffDetails />} />
+        <Route
+          path="/attendance-details/:dept/:year/:month"
+          element={<AttendanceDetails />}
+        />
+        <Route
+          path="/staff/:dept/:year/:month/75/attendance/"
+          element={<HighAttendanceDetails />}
+        />
+        <Route
+          path="/staff/:dept/:year/:month/full/attendance/"
+          element={<FullAttendanceDetails />}
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/attendance/:dept/:year" element={<Attendance />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      {select===1 ? <Footer /> : select===4 ? <Footer/> : select===5 && <Footer/>}
+      {select === 1 ? (
+        <Footer />
+      ) : select === 4 ? (
+        <Footer />
+      ) : (
+        select === 5 && <Footer />
+      )}
     </>
   );
 }

@@ -1,10 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { getClass } from "../utils/class";
 import { useEffect, useState } from "react";
-import { getAttendanceData } from "../API/attendanceAPI";
+import { fetchFullAttendance, getAttendanceData } from "../API/attendanceAPI";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
-const AttendanceDetails = () => {
+
+const FullAttendanceDetails = () => {
   const { dept, year, month } = useParams();
 
   const [details, setDetails] = useState([]);
@@ -16,7 +17,9 @@ const AttendanceDetails = () => {
     async function api() {
       try {
         setLoading(true);
-        const { data } = await getAttendanceData(dept, year, month);
+        console.log("dept, year, month : ", dept, year, month);
+
+        const { data } = await fetchFullAttendance(dept, year, month);
         setDetails(data.data);
       } catch (error) {
         setError(error.response.data.message);
@@ -114,7 +117,9 @@ const AttendanceDetails = () => {
                   to={`/staff/${dept}/${year}/${month}/full/attendance/`}
                   className="rounded-lg bg-black font-bold text-md px-3.5 py-1.5 mx-2"
                 >
-                  <label className="cursor-pointer text-white ">{"100 % >" }</label>
+                  <label className="cursor-pointer text-white ">
+                    {"100 % >"}
+                  </label>
                 </Link>
               </div>
             </div>
@@ -149,4 +154,4 @@ const AttendanceDetails = () => {
   );
 };
 
-export default AttendanceDetails;
+export default FullAttendanceDetails;

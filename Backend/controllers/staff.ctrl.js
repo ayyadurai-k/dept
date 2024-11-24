@@ -278,9 +278,10 @@ exports.getOneClassAttendanceReport = catchAsyncError(
 
 exports.getStudentsWithHighAttendance = catchAsyncError(
   async (req, res, next) => {
-    const { month, year, department, studentYear } = req.params;
+    const { dept, year, month } = req.params;
+    const selectedYear = getYear();
 
-    if (!month || !year || !department || !studentYear) {
+    if (!month || !year || !dept || !selectedYear) {
       return next(
         new ErrorHandler(
           "Month, Year, Department, and Student Year are required!",
@@ -289,27 +290,48 @@ exports.getStudentsWithHighAttendance = catchAsyncError(
       );
     }
 
+    // Calculate total days in the month excluding Sundays
+    const daysInMonth = new Date(year, month, 0).getDate(); // Total days in the month
+    const totalDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
+      .map((day) => new Date(year, month - 1, day)) // Generate all dates
+      .filter((date) => date.getDay() !== 0).length; // Exclude Sundays
+
     const studentAttendanceReports = await studentAttendance.aggregate([
       {
         $match: {
           month: parseInt(month),
           year: parseInt(year),
-          dept: department,
-          currentYear: parseInt(studentYear),
+          dept: dept,
+          currentYear: parseInt(selectedYear),
         },
       },
       {
         $group: {
           _id: "$regno",
-          totalDays: { $sum: 1 },
           presentDays: { $sum: { $cond: ["$present", 1, 0] } },
         },
       },
       {
+        $lookup: {
+          from: "students", // Assuming a 'students' collection exists
+          localField: "_id",
+          foreignField: "regno",
+          as: "studentInfo",
+        },
+      },
+      {
+        $unwind: "$studentInfo",
+      },
+      {
         $project: {
+          _id: 1,
           regno: "$_id",
+          name: "$studentInfo.name",
+          totalDays: { $literal: totalDays }, // Static total days
+          presentDays: 1,
+          absentDays: { $subtract: [totalDays, "$presentDays"] },
           attendancePercentage: {
-            $multiply: [{ $divide: ["$presentDays", "$totalDays"] }, 100],
+            $multiply: [{ $divide: ["$presentDays", totalDays] }, 100],
           },
         },
       },
@@ -339,9 +361,10 @@ exports.getStudentsWithHighAttendance = catchAsyncError(
 
 exports.getStudentsWithFullAttendance = catchAsyncError(
   async (req, res, next) => {
-    const { month, year, department, studentYear } = req.params;
+    const { dept, year, month } = req.params;
+    const selectedYear = getYear();
 
-    if (!month || !year || !department || !studentYear) {
+    if (!month || !year || !dept || !selectedYear) {
       return next(
         new ErrorHandler(
           "Month, Year, Department, and Student Year are required!",
@@ -350,25 +373,54 @@ exports.getStudentsWithFullAttendance = catchAsyncError(
       );
     }
 
-    const studentAttendanceReports = await studentAttendanceSchema.aggregate([
+    // Calculate total days in the month excluding Sundays
+    const daysInMonth = new Date(year, month, 0).getDate(); // Total days in the month
+    const totalDays = Array.from({ length: daysInMonth }, (_, i) => i + 1)
+      .map((day) => new Date(year, month - 1, day)) // Generate all dates
+      .filter((date) => date.getDay() !== 0).length; // Exclude Sundays
+
+    const studentAttendanceReports = await studentAttendance.aggregate([
       {
         $match: {
           month: parseInt(month),
           year: parseInt(year),
-          dept: department,
-          currentYear: parseInt(studentYear),
+          dept: dept,
+          currentYear: parseInt(selectedYear),
         },
       },
       {
         $group: {
           _id: "$regno",
-          totalDays: { $sum: 1 },
           presentDays: { $sum: { $cond: ["$present", 1, 0] } },
         },
       },
       {
         $match: {
-          $expr: { $eq: ["$totalDays", "$presentDays"] },
+          $expr: { $eq: ["$presentDays", totalDays] },
+        },
+      },
+      {
+        $lookup: {
+          from: "students", // Assuming a 'students' collection exists
+          localField: "_id",
+          foreignField: "regno",
+          as: "studentInfo",
+        },
+      },
+      {
+        $unwind: "$studentInfo",
+      },
+      {
+        $project: {
+          _id: 1,
+          regno: "$_id",
+          name: "$studentInfo.name",
+          totalDays: { $literal: totalDays },
+          presentDays: 1,
+          absentDays: { $subtract: [totalDays, "$presentDays"] },
+          attendancePercentage: {
+            $multiply: [{ $divide: ["$presentDays", totalDays] }, 100],
+          },
         },
       },
     ]);
